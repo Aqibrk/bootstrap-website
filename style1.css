@@ -1,0 +1,470 @@
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+.search-form {
+    border-radius: 3px;
+}
+.search-button {
+    border-radius: 0 3px 3px 0;
+    background-color: orange;
+    color: #fff;
+}
+.user-icon {
+    cursor: pointer; 
+    font-size: 20px;
+     color: #30c5e7;
+}
+.wishlist-button,
+.cart-button {
+    border: none;
+    margin-left: 10px;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-color: #333; /* Customize the toggler icon color */
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
+}
+.navbar-nav {
+    margin-left: auto; /* Push navbar items to the right */
+}
+.nav-item {
+    margin: 0 10px; /* Equal margin on both sides of navbar items */
+}
+.nav-link {
+    color: #333;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #555;
+}
+.hero-section {
+background-image: url('img/hero-bg.jpg');
+background-size: cover;
+background-position: center;
+padding: 100px 0;
+text-align: center;
+color: #fff;
+position: relative; /* Relative positioning for absolute overlay */
+overflow: hidden; /* Hide overflow content */
+}
+
+.hero-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.5s; /* Smooth transition for opacity */
+}
+
+.hero-section:hover:before {
+    opacity: 1; /* Fully visible on hover */
+}
+
+.hero-section h1,
+.hero-section p {
+    position: relative;
+    opacity: 0; /* Initially transparent */
+    transform: translateY(20px); /* Move down slightly */
+    transition: opacity 0.5s, transform 0.5s; /* Smooth transition for opacity and transform */
+}
+
+.hero-section:hover h1,
+.hero-section:hover p {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(0); /* Move back to original position */
+    color: #fff; /* Change text color on hover */
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}   
+
+.card {
+    width: 100%;
+    height: 400px; /* Reduced card height */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: 250px; /* Reduced image height */
+    object-fit: cover; /* Cover the entire card with the image */
+}
+.card-body {
+    text-align: center;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.card-body{
+   text-align: center;
+}
+.card-icons {
+    position: absolute;
+    display: flex; 
+    top: 50%; /* Position icons at the vertical center of the card */
+    left: 50%; /* Position icons at the horizontal center of the card */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-icons {
+    opacity: 1;
+}
+
+.card-icons i {
+    font-size: 24px;
+    color: orange;
+    background-color: #f8f9fa;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 6px;
+    transition: transform 0.3s ease;
+}
+
+.card-icons i:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .card {
+        width: calc(25% - 20px); /* Adjust width for 4 cards in view */
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        width: calc(33.33% - 20px); /* Adjust width for 3 cards in view */
+    }
+}
+@media (max-width: 576px) {
+    .card {
+        width: calc(50% - 20px); /* Adjust width for 2 cards in view */
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* Adjust width for 1 card in view */
+    }
+     .search-form {
+    margin-top: 10px;
+}
+
+} */
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 40px 0;
+    position: relative;
+    margin-top: auto;
+}
+footer .container {
+    text-align: center;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    margin-bottom: 10px;
+}
+footer ul li:last-child {
+    margin-bottom: 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+/* Back to Top Button Styles */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#back-to-top:hover {
+    background: #0056b3;
+}
+  /* single page  */
+  .product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.product-details .product-image {
+    width: 100%;
+    max-width: 400px; /* Max width for large screens */
+    height: auto;
+    text-align: center; /* Center the image */
+}
+
+.product-details .product-image img {
+    max-width:250px;
+    height: 400px;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .product-details .product-image {
+        max-width: 100%; /* Full width for small screens */
+    }
+
+    .product-details .product-info {
+        margin-top: 20px; /* Add space between image and info on small screens */
+    }
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-color: #fff; /* Light color for toggler icon */
+}
+.navbar-nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.nav-item {
+    padding: 10px 20px;
+}
+.nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #ffd700; /* Change color on hover */
+}
+/* Class for 4 columns */
+ul.rig.columns-4 {
+margin: 30px;
+}
+
+ul.rig.columns-4 li {
+width: 22.5%;
+text-align: center;
+/* This value + 2.5 should = 25% */
+}
+
+@media (max-width: 1200px) {
+ul.rig.columns-4 li {
+    width: 30%;
+}
+ul.rig.columns-4 {
+margin-right: 30px;
+}
+}
+
+@media (max-width: 992px) {
+ul.rig.columns-4 li {
+    width: 48%;
+}    ul.rig.columns-4 {
+margin-right: 40px;
+}
+}
+
+@media (max-width: 768px) {
+ul.rig.columns-4 {
+    margin: 0; /* Remove margin for smaller screens */
+}
+ul.rig.columns-4 li {
+    width: 100% !important; /* Full width for small screens */
+    margin: 0 0 10px; /* Adjust margin for spacing between items */
+}    ul.rig.columns-4 {
+margin-right: 30px;
+}
+}
+
+ul.rig.columns-4 li {
+display: inline-block;
+padding: 10px;
+background: #fff;
+border: 1px solid #ddd;
+font-size: 16px;
+font-size: 1rem;
+vertical-align: top;
+box-shadow: 0 0 0px #000000;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+margin-left: 14px;
+min-height: 400px;
+margin-top: 10px;
+
+}
+
+ul.rig.columns-4 li img {
+max-width: 100%; /* Adjust image width */
+height: auto;
+margin: 0 0 10px;
+height: 200px;
+}
+
+ul.rig.columns-4 li h3 {
+margin: 0 0 10px;
+}
+
+ul.rig.columns-4 li p {
+font-size: 1.0em;
+line-height: 1.5em;
+color: #000000;
+}
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Product details styles */
+    .product-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5px; /* Reduced padding */
+    }
+
+    .product-details .product-image {
+        width: 100%;
+        max-width: 250px; /* Reduced max-width */
+        text-align: center;
+    }
+
+    .product-details .product-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .product-info {
+        flex: 1;
+        padding: 5px; /* Reduced padding */
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-top: 5px; /* Reduced margin-top */
+    }
+
+    .product-info h1 {
+        margin-bottom: 3px; /* Reduced margin-bottom */
+        font-size: 18px; /* Reduced font size */
+    }
+
+    .product-info p {
+        margin-bottom: 3px; /* Reduced margin-bottom */
+        font-size: 14px; /* Reduced font size */
+    }
+
+    /* Card styles */
+    .custom-card {
+        height: 250px; /* Reduced card height */
+    }
+
+    .custom-card .card-img-top {
+        max-height: 120px; /* Reduced image height */
+        object-fit: cover;
+    }
+
+    .custom-card .card-body,
+    .custom-card .card-footer {
+        height: auto; /* Let the content determine the height */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .product-details .product-image {
+            max-width: 100%;
+        }
+
+        .product-info {
+            width: 100%;
+            margin-top: 5px; /* Reduced margin-top */
+        }
+
+        .product-info h1,
+        .product-info p {
+            font-size: 16px; /* Adjusted font size for smaller screens */
+        }
+    }
+    .custom-card {
+        height: 400px; /* Adjust this value as needed */
+    }
+
+    .custom-card .card-img-top {
+        max-height: 200px; /* Adjust the image height */
+        object-fit: contain; /* or object-fit: cover; depending on how you want the image to be displayed */
+    }
+
+    .custom-card .card-body,
+    .custom-card .card-footer {
+        height: auto; /* Let the content determine the height */
+    }
+    .product-info{
+        text-align:center;
+    }
